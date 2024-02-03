@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj kwotę rachunku"
+        android:inputType="numberDecimal"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextNumberOfPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Liczba osób"
+        android:inputType="number"
+        android:layout_below="@id/editTextBillAmount"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextTipPercentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Procent napiwku"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/editTextNumberOfPeople"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        android:layout_below="@id/editTextTipPercentage"
+        android:layout_marginTop="16dp"
+        android:onClick="calculateTip"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalculate"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:text="Wynik"/>
+
+</RelativeLayout>
